@@ -1,0 +1,4 @@
+Django==2.1
+djangorestframework==3.8
+djangorestframework-jwt==1.11.0
+pymongo==3.7.1
