@@ -1,6 +1,5 @@
 from django.db import models
-from mongoengine import fields as mongo_fields
-from mongoengine import EmbeddedDocument
+
 
 class DataSet(models.Model):
     id = models.CharField(
@@ -41,8 +40,3 @@ class DataSet(models.Model):
     @property
     def time_second(self):
         return self.time.second
-
-
-class UnstructuredDataSet(EmbeddedDocument):
-    name = mongo_fields.StringField(required=True)
-    value = mongo_fields.DynamicField(required=True)

@@ -133,3 +133,7 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
     ),
 }
+
+
+MONGODB_DATABASE = 'dataset'
+MONGODB_COLLECTION = 'collect1'
