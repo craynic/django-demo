@@ -1,0 +1,158 @@
+{
+	"variables": [],
+	"info": {
+		"name": "shurong-demo",
+		"_postman_id": "d641b205-9a22-d254-83ba-8937cb16795d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get auth token",
+			"request": {
+				"url": "http://127.0.0.1:8000/api-token-auth/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"admin\", \"password\":\"admin\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get api root",
+			"request": {
+				"url": "http://127.0.0.1:8000/api/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNTMzNzk5MTk5LCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSJ9.uJHnnSR4m5dfMQf32VdICneum-J8UhGuU6l0sAcGVKs",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create unstructured data set",
+			"request": {
+				"url": "http://127.0.0.1:8000/api/unstructured/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "//Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNTMzODAwMDQ1LCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSJ9.GUG7kQRx7ZluhYdOTLKvCvJVmQM3QfKmDZzhl7AC_nI",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\n\t\"id\" : \"55c89cf7093a1d0fd69c67ec\",\n\t\t\"text\" : \"Pimple popping time 💋\",\n\t\t\"userID\" : \"insta43104657\",\n\t\t\"userName\" : \"amirasyafiqah_\",\n\t\t\"day\" : \"04\",\n\t\t\"month\" : \"07\",\n\t\t\"year\" : \"2015\",\n\t\t\"hour\" : \"15\",\n\t\t\"minute\" : \"11\",\n\t\t\"second\" : \"46\",\n\t\t\"source\" : \"instagram\",\n\t\t\"sentiment\" : \"negative\",\n\t\t\"sentiStrings\" : \"💋 \",\n\t\t\"labelledSentiment\" : \"positive\",\n\t\t\"crowder\" : \"admin\",\n\t\"coor_x\":103.740383629,\"coor_y\":1.33502658\n}]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "list unstructured data set",
+			"request": {
+				"url": "http://127.0.0.1:8000/api/unstructured/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "//Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNTMzODAwMDQ1LCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSJ9.GUG7kQRx7ZluhYdOTLKvCvJVmQM3QfKmDZzhl7AC_nI",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\n\t\"id\" : \"55c89cf7093a1d0fd69c67ec\",\n\t\t\"text\" : \"Pimple popping time 💋\",\n\t\t\"userID\" : \"insta43104657\",\n\t\t\"userName\" : \"amirasyafiqah_\",\n\t\t\"day\" : \"04\",\n\t\t\"month\" : \"07\",\n\t\t\"year\" : \"2015\",\n\t\t\"hour\" : \"15\",\n\t\t\"minute\" : \"11\",\n\t\t\"second\" : \"46\",\n\t\t\"source\" : \"instagram\",\n\t\t\"sentiment\" : \"negative\",\n\t\t\"sentiStrings\" : \"💋 \",\n\t\t\"labelledSentiment\" : \"positive\",\n\t\t\"crowder\" : \"admin\",\n\t\"coor_x\":103.740383629,\"coor_y\":1.33502658\n}]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create structured data set",
+			"request": {
+				"url": "http://127.0.0.1:8000/api/dataset/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNTMzNzk5NjU4LCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSJ9.q84Db701YgSLT64pQYR0nmdNPe2ugS_4IG9SauxIE1E",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\n\t\"id\" : \"55c89cf7092a0c0fd69c67ec\",\n\t\t\"text\" : \"Pimple popping time 💋\",\n\t\t\"userID\" : \"insta43104657\",\n\t\t\"userName\" : \"amirasyafiqah_\",\n\t\t\"day\" : \"04\",\n\t\t\"month\" : \"07\",\n\t\t\"year\" : \"2015\",\n\t\t\"hour\" : \"15\",\n\t\t\"minute\" : \"11\",\n\t\t\"second\" : \"46\",\n\t\t\"source\" : \"instagram\",\n\t\t\"sentiment\" : \"negative\",\n\t\t\"sentiStrings\" : \"💋 \",\n\t\t\"labelledSentiment\" : \"positive\",\n\t\t\"crowder\" : \"admin\",\n\t\"coor_x\":103.740383629,\"coor_y\":1.33502658\n}]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "list structured data set",
+			"request": {
+				"url": "http://127.0.0.1:8000/api/dataset/?limit=2&offset=1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNTMzNzk5NjU4LCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSJ9.q84Db701YgSLT64pQYR0nmdNPe2ugS_4IG9SauxIE1E",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\n\t\"id\" : \"55c89cf7092a0c0fd69c67ec\",\n\t\t\"text\" : \"Pimple popping time 💋\",\n\t\t\"userID\" : \"insta43104657\",\n\t\t\"userName\" : \"amirasyafiqah_\",\n\t\t\"day\" : \"04\",\n\t\t\"month\" : \"07\",\n\t\t\"year\" : \"2015\",\n\t\t\"hour\" : \"15\",\n\t\t\"minute\" : \"11\",\n\t\t\"second\" : \"46\",\n\t\t\"source\" : \"instagram\",\n\t\t\"sentiment\" : \"negative\",\n\t\t\"sentiStrings\" : \"💋 \",\n\t\t\"labelledSentiment\" : \"positive\",\n\t\t\"crowder\" : \"admin\",\n\t\"coor_x\":103.740383629,\"coor_y\":1.33502658\n}]"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
