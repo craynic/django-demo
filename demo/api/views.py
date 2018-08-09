@@ -9,14 +9,11 @@ from storage.models import DataSet
 from api.serializers import DataSetSerializer
 
 
-class DataSetViewSet(GenericViewSet):
+class DataSetViewSet(
+    mixins.ListModelMixin,
+    GenericViewSet):
     queryset = DataSet.objects.all()
     serializer_class = DataSetSerializer
-
-    def list(self, request):
-        queryset = self.filter_queryset(self.get_queryset())
-        serializer = self.get_serializer(queryset, many=True)
-        return Response(serializer.data)
 
     def perform_create(self, serializer):
         return serializer.save()
